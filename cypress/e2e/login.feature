@@ -1,5 +1,5 @@
+@qa_release   @current 
 Feature: dadras.com
-  @current 
   Scenario Outline: login dadras
     Given User visit homepage in <platform> 
     When User should login in <platform> : 
