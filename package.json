@@ -3,8 +3,11 @@
   "version": "1.0.0",
   "scripts": {
     "cypress": "node_modules/cypress/bin/cypress",
-    "test": "npm run cypress -- run",
-    "open": "npm run cypress -- open"
+    "test:run": "npm run cypress -- run",
+    "open": "npm run cypress -- open",
+    "web": "npm run test:run -- --env tags='@qa_release and @web'",
+    "rest": "npm run test:run -- --env tags='@qa_release and @rest'",
+    "current": "npm run test:run -- --env tags='@qa_release and @current'"
   },
   "dependencies": {
     "@badeball/cypress-cucumber-preprocessor": "latest",

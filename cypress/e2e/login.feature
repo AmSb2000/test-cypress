@@ -1,19 +1,20 @@
-@qa_release   @current 
+@qa_release
 Feature: dadras.com
-  Scenario Outline: login dadras
-    Given User visit homepage in <platform> 
-    When User should login in <platform> : 
+  Scenario Outline: login
+    Given User visit home page in <platform> 
+    * User fill create session form in <platform>:
       | username | <username> |
       | password | <password> |
-    Then User loged in 
+    When User submit in <platform> 
+    Then User see <message>
 
-  @web
+  @web @current 
   Examples: 
-    | platform | username | password | 
-    | web      | admin    | 81310514 | 
+    | platform | username | password | message |
+    | web      | admin    | 81310514 | success |
   
   @rest
   Examples: 
-    | platform | username | password | 
-    | rest      | admin    | 81310514 | 
+    | platform | username | password | message | 
+    | rest     | admin    | 81310514 | success |
   
