@@ -1,1 +1,1 @@
-import "cy-ms-form-builder";
+import "../../share-cypress-cucumber-tools/cy-ms-form-builder/public";
