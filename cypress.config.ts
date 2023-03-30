@@ -1,6 +1,10 @@
 import { defineConfig } from "cypress";
 import { addCucumberPreprocessorPlugin } from "@badeball/cypress-cucumber-preprocessor";
 import browserify from "@badeball/cypress-cucumber-preprocessor/browserify";
+import * as dotenv from 'dotenv'
+dotenv.config() // read .env file from project root and add it to process.env
+import { backup_db, restore_db } from "./share-cypress-cucumber-tools/db_management/db_management"
+
 
 async function setupNodeEvents(
   on: Cypress.PluginEvents,
@@ -15,6 +19,21 @@ async function setupNodeEvents(
       typescript: require.resolve("typescript"),
     })
   );
+  // define cypress tasks...
+  on("task", {
+    "db:seedAndBackup":() => {
+      // const teardown = require("../../db/teardown.js");
+      console.log('seedAndBackup the db')
+      backup_db()
+      return true;
+    },
+    "db:restore": () => {
+      // const seed = require("../../db/seed.js");
+      console.log('restore the db')
+      restore_db()
+      return true;
+    },
+  });
 
   // Make sure to return the config object as it might have been modified by the plugin.
   return config;
