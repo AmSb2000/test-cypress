@@ -12,7 +12,8 @@
   "dependencies": {
     "@badeball/cypress-cucumber-preprocessor": "latest",
     "@cypress/browserify-preprocessor": "latest",
-    "typescript": "latest",
-    "cypress": "^12.3.0"
+    "cypress": "^12.3.0",
+    "dotenv": "^16.0.3",
+    "typescript": "latest"
   }
 }
