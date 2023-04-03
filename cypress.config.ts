@@ -22,13 +22,12 @@ async function setupNodeEvents(
   // define cypress tasks...
   on("task", {
     "db:seedAndBackup":() => {
-      // const teardown = require("../../db/teardown.js");
       console.log('seedAndBackup the db')
+      // TODO: add seeds
       backup_db()
       return true;
     },
     "db:restore": () => {
-      // const seed = require("../../db/seed.js");
       console.log('restore the db')
       restore_db()
       return true;
