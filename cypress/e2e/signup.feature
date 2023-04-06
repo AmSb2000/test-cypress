@@ -1,6 +1,6 @@
 Feature:sign up
     Scenario:success sign up 
-        Given User visit ?? page in web
+        Given User visit signup page in web
         Given User fill signup form
             | name*string | nationalCode*int | phoneNumber*int |
             |             |                  |                 |
@@ -8,7 +8,7 @@ Feature:sign up
         Then User should see ورود به حساب
     
     Scenario:fail sign up with wrong national code 
-        Given User visit ?? page in web
+        Given User visit signup page in web
         Given User fill signup form
             | name*string | nationalCode*int | phoneNumber*int |
             |             |                  |                 |

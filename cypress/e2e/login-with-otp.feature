@@ -1,7 +1,7 @@
 Feature:login
     Background: User visit site
     Scenario:success login  
-        Given User visit ?? page in web
+        Given User visit login page in web
         * User fill number form
             | number*int |
             |            |  
@@ -14,7 +14,7 @@ Feature:login
 
 
     Scenario:fail login
-        Given User visit ?? page in web
+        Given User visit login page in web
         * User fill number form
             | number*int |
             |            |
