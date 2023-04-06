@@ -3,7 +3,7 @@ import { addCucumberPreprocessorPlugin } from "@badeball/cypress-cucumber-prepro
 import browserify from "@badeball/cypress-cucumber-preprocessor/browserify";
 import * as dotenv from 'dotenv'
 dotenv.config() // read .env file from project root and add it to process.env
-import { backup_db, restore_db } from "./share-cypress-cucumber-tools/db_management/db_management"
+import { backup_db, restore_db } from "./share-cypress-cucumber-tools/db_management/src/app/db_management"
 
 
 async function setupNodeEvents(
