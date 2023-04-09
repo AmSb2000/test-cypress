@@ -8,7 +8,7 @@ Feature:login
         * User click تایید شمارهbutton 
         * User fill otpCode form 
             | otp*int   |
-            |            |
+            |           |
         When User click ورود به حساب button 
         Then User should see داشبورد 
 
@@ -21,6 +21,6 @@ Feature:login
         * User click تایید شمارهbutton
         * User fill otpCode form 
             | otp*int   |
-            |            |        
+            |           |        
         Then User should see ورود به حساب
 

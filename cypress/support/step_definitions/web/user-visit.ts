@@ -2,7 +2,7 @@ import { When, Then, Given } from "@badeball/cypress-cucumber-preprocessor";
 var url={
   home : '',
   dashboard:'/dashboard',
-  compony:'/compony',
+  company:'/company',
   profile :'/profile',
   login:'/login',
   signup:'/signup'

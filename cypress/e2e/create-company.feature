@@ -1,20 +1,15 @@
-Feature: create compony
+Feature: create company
     Scenario:success 
         Given User login as a admin
-        * User visit compony page
+        * User visit company page
         * User click ثبت دامنه button
         * User fill the form
-        | name*string | registerNumber*int | nationalId*int | code*int | phone*int | licenseNumber*int | address*strin  | link*string |
+        | name*string | registerNumber*int | nationalId*int | code*int | phone*int | licenseNumber*int | address*string  | link*string |
         |  <name>     |  <registerNumber>  |  <nationalId>  | <code>   |  <phone>  |  <licenseNumber>  |  <address>     |  <link>     |
         * User fill the widget 
         |  day |
         |<date>|
-        * User click ثبت button
-        * User visit compony page
-        * User click edit button
-        * User fill the widget
-        | selectSingle | selectSingle |
-        When User click ثبت تغییرات
+        When User click ثبت button
         Then User see <name> 
 
 
