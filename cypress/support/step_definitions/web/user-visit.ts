@@ -5,7 +5,8 @@ var url={
   company:'/company',
   profile :'/profile',
   login:'/login',
-  signup:'/signup'
+  signup:'/signup',
+  news:'/news'
 }
 Given("User visit {word} page in web", (link) => {
   cy.visit(url[link as string]);
