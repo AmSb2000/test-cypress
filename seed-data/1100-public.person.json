@@ -1,0 +1,14 @@
+{
+  "entities" : [
+    {
+      "uuid": "p3",
+      "nationalCode":"123456",
+      "landlineNumber": "123456"
+    },
+    {
+      "uuid": "p4",
+      "nationalCode":"1234567",
+      "landlineNumber": "1234567"
+    }
+]
+}

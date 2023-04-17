@@ -1,15 +1,15 @@
 import "../../share-cypress-cucumber-tools/cy-ms-form-builder/public";
 
-before(() => {
+ before(() => {
+	// TODO: this should be called just once for all tests. test it...
 	console.log('I run before tests start')
-	// insert test data and take snapshot
-	// TODO: run cy tast to seed the test data
-	cy.task('db:seedAndBackup')
+	// insert test data to db, with seeder api
+	cy.task('db:seed').then(function(res) {expect(res).to.eq(true);console.log('db:seed task finished successfully.')})
+	cy.task('db:backup').then(function(res) {expect(res).to.eq(true); console.log('db:backup task finished successfully.')})
 })
 
 
 beforeEach(() => {
 	console.log('I run before every test in every spec file!!!!!!')
-	// restore db backup 
-	cy.task('db:restore')
+	cy.task('db:restore').then(function(res) { expect(res).to.eq(true); console.log('db:restore task finished successfully.')})
 })

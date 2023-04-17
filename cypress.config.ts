@@ -3,8 +3,9 @@ import { addCucumberPreprocessorPlugin } from "@badeball/cypress-cucumber-prepro
 import browserify from "@badeball/cypress-cucumber-preprocessor/browserify";
 import * as dotenv from 'dotenv'
 dotenv.config() // read .env file from project root and add it to process.env
-import { backup_db, restore_db } from "./share-cypress-cucumber-tools/db_management/src/app/db_management"
-
+// TODO: fix imports
+import { backup_db, restore_db } from "./share-cypress-cucumber-tools/db-management/src/app/backup-and-restore"
+import { callSeederApi } from "./share-cypress-cucumber-tools/db-management/src/app/api-caller";
 
 async function setupNodeEvents(
   on: Cypress.PluginEvents,
@@ -21,16 +22,14 @@ async function setupNodeEvents(
   );
   // define cypress tasks...
   on("task", {
-    "db:seedAndBackup":() => {
-      console.log('seedAndBackup the db')
-      // TODO: add seeds
-      backup_db()
-      return true;
+    "db:seed": () => {
+      return callSeederApi();
+    },
+    "db:backup":() => {
+      return backup_db();
     },
     "db:restore": () => {
-      console.log('restore the db')
-      restore_db()
-      return true;
+      return restore_db();
     },
   });
 
