@@ -1,3 +1,4 @@
 node_modules/
 .pnpm-store/
 cypress/videos/
+db_backup.sql
