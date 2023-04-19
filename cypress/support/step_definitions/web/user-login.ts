@@ -1,5 +1,5 @@
 import { Given } from "@badeball/cypress-cucumber-preprocessor";
-// import { DT2Object } from '../../../../share-cypress-cucumber-tools/dtable2obj';
+// import { DT2Object } from '../../../../share-cypress-cucumber-tools/dtable2obj/src/app';
 
 let object = {
     admin:{
