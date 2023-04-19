@@ -41,7 +41,7 @@ async function setupNodeEvents(
 
 export default defineConfig({
   e2e: {
-    baseUrl: "https://dg.hyvatech.com/",
+    baseUrl: "http://localhost",
     specPattern: "**/*.feature",
     setupNodeEvents,
     chromeWebSecurity: false,

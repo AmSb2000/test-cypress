@@ -1,5 +1,5 @@
 import { When, Then, Given } from "@badeball/cypress-cucumber-preprocessor";
-
-Given("User visit {word} page in web", (...args) => {
-  console.log(...args);
+import { URL } from "../../../constans/web-urls";
+Given("User visit {word} page in web", (link) => {
+  cy.visit(URL[link as string]);
 });
