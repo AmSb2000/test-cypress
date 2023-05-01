@@ -3,8 +3,8 @@ import "../../share-cypress-cucumber-tools/cy-ms-form-builder/public";
  before(() => {
 	console.log('I run before tests start')
 	// insert test data to db, with seeder api
-	cy.task('dataManagement:seedIfBackupNotExist').then(function(res) {expect(res).to.eq(true);console.log('db:seedIfBackupNotExist task finished successfully.')})
-	cy.task('dataManagement:backupIfNotExist').then(function(res) {expect(res).to.eq(true); console.log('db:backupIfNotExist task finished successfully.')})
+	cy.task('dataManagement:seed').then(function(res) {expect(res).to.eq(true);console.log('db:seedIfBackupNotExist task finished successfully.')})
+	cy.task('dataManagement:backup').then(function(res) {expect(res).to.eq(true); console.log('db:backupIfNotExist task finished successfully.')})
 })
 
 

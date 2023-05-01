@@ -4,7 +4,7 @@ import browserify from "@badeball/cypress-cucumber-preprocessor/browserify";
 import * as dotenv from 'dotenv'
 dotenv.config() // read .env file from project root and add it to process.env
 // TODO: fix imports
-import { MainDataManager } from "./share-cypress-cucumber-tools/data-management/src/app/main-data-manager";
+import { DataSeederHandler } from "./share-cypress-cucumber-tools/data-management/src/app";
 
 async function setupNodeEvents(
   on: Cypress.PluginEvents,
@@ -21,14 +21,14 @@ async function setupNodeEvents(
   );
   // define cypress tasks...
   on("task", {
-    "dataManagement:seedIfBackupNotExist": () => {
-      return MainDataManager.getInstance().seedAllIfBackupNotExist()
+    "dataManagement:seed": () => {
+      return DataSeederHandler.getInstance().seedAll()
     },
-    "dataManagement:backupIfNotExist":() => {
-      return MainDataManager.getInstance().backupAllIfNotExist()
+    "dataManagement:backup":() => {
+      return DataSeederHandler.getInstance().backupAll();
     },
     "dataManagement:restore": () => {
-      return MainDataManager.getInstance().restoreAll()
+      return DataSeederHandler.getInstance().restoreAll();
     },
   });
 
