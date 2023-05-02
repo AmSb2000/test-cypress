@@ -1,5 +1,5 @@
 Feature: create news
-    Scenario: success
+    Scenario Outline: success
         Given User login as a User
         * User visit news page
         * User click اضافه کردن خبر button

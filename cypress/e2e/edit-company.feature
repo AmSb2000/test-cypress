@@ -1,9 +1,8 @@
 Feature:edit company
     Scenario:success 
         Given User visit company page
-        * User click edit button
-        * User fill the widget
-        | selectSingle | selectSingle |
+        * User click ویرایش icon in list
+        * User fill the form
         When User click ثبت تغییرات
         Then User see <name> 
 

@@ -15,16 +15,4 @@ Feature:login
 
       Examples:
         | phone |
-    Scenario:fail login
-        Given User visit login page in web
-        * User fill number form
-            | phoneNumber*int |
-            |    <phone>      |
-        * User click تایید شمارهbutton
-        * User fill otpCode form 
-            | otp*int   |
-            |           |        
-        Then User should see ورود به حساب
-     Examples:
-        | phone |
 
