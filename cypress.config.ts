@@ -21,14 +21,14 @@ async function setupNodeEvents(
   );
   // define cypress tasks...
   on("task", {
-    "dataManagement:seed": () => {
-      return DataSeederHandler.getInstance().seedAll()
+    "dataManagement:before": () => {
+      return DataSeederHandler.getInstance().before()
     },
-    "dataManagement:backup":() => {
-      return DataSeederHandler.getInstance().backupAll();
+    "dataManagement:beforeEach":() => {
+      return DataSeederHandler.getInstance().beforeEach();
     },
-    "dataManagement:restore": () => {
-      return DataSeederHandler.getInstance().restoreAll();
+    "dataManagement:after": () => {
+      return DataSeederHandler.getInstance().after();
     },
   });
 
