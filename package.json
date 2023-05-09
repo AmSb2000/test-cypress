@@ -12,7 +12,9 @@
   "dependencies": {
     "@badeball/cypress-cucumber-preprocessor": "latest",
     "@cypress/browserify-preprocessor": "latest",
-    "typescript": "latest",
-    "cypress": "^12.3.0"
+    "typescript": "latest"
+  },
+  "devDependencies": {
+    "cypress": "^12.11.0"
   }
 }

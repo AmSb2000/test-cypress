@@ -2,7 +2,7 @@ Feature: create news
     Scenario Outline: success
         Given User login as a User
         * User visit news page
-        * User click اضافه کردن خبر button
+        * User click "اضافه کردن خبر" button in web
         * User fill the widget
             | title |
             |<title>|
@@ -13,7 +13,7 @@ Feature: create news
         * User fill the widget
             | ckEditor |
             | <content>|
-        When User click اضافه کردن button
+        When User click "اضافه کردن" button in web
         Then User see <title>
 
         Examples:

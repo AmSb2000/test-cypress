@@ -3,11 +3,11 @@ Feature: create company
     Scenario Outline:success 
         Given User login as a admin
         * User visit company page in web
-        * User click "ثبت دامنه" button
+        * User click "ثبت دامنه" button in web
         Given User fill the form
         | name | shomare_sabt | shenase_meli | parvane_nesam_mohandesi | code_eghtesadi | telephone | domain | address |
         |<name>|<shomare_sabt>|<shenase_meli>|<parvane_nesam_mohandesi>|<code_eghtesadi>|<telephone>|<domain>|<address>|
-        When User click "ثبت" button
+        When User click "ثبت" button in web
         Then User <action> <name> 
 
 
