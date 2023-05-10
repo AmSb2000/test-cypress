@@ -3,7 +3,7 @@ Feature:create project
     Scenario Outline: success
         Given User login as a admin
         * User click "ایجاد پروژه" in menu
-        * User fill the form 
+        * User fill the form in web
             | title | projectPropertyInfo*file | projectDeliveryDate | adress | tahlileEghtesadi | meterage*int | substruction*int | cancellationConditions | lateFees | finalFeature | implementationSteps.0.descreption | ImplementationSteps.0.date | generalDescription |
         When User click "ثبت" button in web
         Then User <action> "ثبت واحد"

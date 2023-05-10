@@ -5,7 +5,7 @@ Feature: complete profile
         * User visit profile page in web
         * User click "تکمیل پروفایل" button in web
         * User fill the form
-            | address | phone | profile | accountNumber |
+            | address | phone | profile*file | bankAccountNumber |
             |<address>|<phone>|<profile>|<accountNumber>|
         When User click "ثبت" button in web
         Then User <action> <phone>

@@ -6,7 +6,7 @@ Feature:login
             | phoneNumber*int |
             |     <phone>     |  
         * User click تایید شمارهbutton 
-        * User fill otpCode form 
+        * User fill otpCode form in web
             | otp*int   |
             |           |
         When User click ورود به حساب button 
