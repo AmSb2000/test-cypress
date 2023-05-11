@@ -44,10 +44,11 @@ export class TFromData<Type> extends FormData { }
 
 Given('User fill {word} form in rest', (id, data: DataTable) => {
     let res = DT2Object.resolve(data);
-    setTimeout(() => {
-        let formData = ObjectToFormData(res);
-        for (const key of formData.keys()) {
-            console.log(`key:${key}`,`value:${formData.get(key)}`);
-        }
-    }, 100);
+    let formData = ObjectToFormData(res);
+    // setTimeout(() => {
+    //     for (const key of formData.keys()) {
+    //         console.log(`key:${key}`,`value:${formData.get(key)}`);
+    //     }
+    // }, 100);
+    cy.request('POST','https://uploadio.basalam.com/api_v1.0/store-file', formData , )
 })
