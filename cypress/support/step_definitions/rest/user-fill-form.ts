@@ -50,5 +50,5 @@ Given('User fill {word} form in rest', (id, data: DataTable) => {
     //         console.log(`key:${key}`,`value:${formData.get(key)}`);
     //     }
     // }, 100);
-    cy.request('POST','https://uploadio.basalam.com/api_v1.0/store-file', formData , )
+
 })
