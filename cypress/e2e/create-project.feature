@@ -5,8 +5,9 @@ Feature:create project
         * User click "ایجاد پروژه" in menu
         * User fill the form in web
             | title | projectPropertyInfo*file | projectDeliveryDate | adress | tahlileEghtesadi | meterage*int | substruction*int | cancellationConditions | lateFees | finalFeature | implementationSteps.0.descreption | ImplementationSteps.0.date | generalDescription |
+            |<title>|         <file>           |<projectDeliveryDate>|<adress>|<tahlileEghtesadi>| <meterage>   | <substruction>   |<cancellationConditions>|<lateFees>|<finalFeature>|<implementationStepsDescreption>   | <ImplementationStepsDate>  |<generalDescription>|                                                                                                               
         When User click "ثبت" button in web
         Then User <action> "ثبت واحد"
         Examples:
-            | title | file | projectDeliveryDate | address | tahlileEghtesadi | meterage*int | substruction*int | cancellationConditions | lateFees | finalFeature | implementationSteps.0.description | ImplementationSteps.0.date | generalDescription | action | 
-            |       |      |                     |         |                  |              |                  |                        |          |              |                                   |                            |                    |  see   |
+            | title | file | projectDeliveryDate | address | tahlileEghtesadi | meterage | substruction | cancellationConditions | lateFees | finalFeature | implementationStepsDescription | ImplementationStepsDate | generalDescription | action | 
+            |       |      |                     |         |                  |          |              |                        |          |              |                                |                         |                    |  see   |
