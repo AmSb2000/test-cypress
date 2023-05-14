@@ -7,10 +7,9 @@ Feature: create news
             | title*string |  category.0.name | category.1.name |  description  |
             |  <title>     |    <category1>   |  <category2>    | <description> |
         When User click "ثبت" button in web
-
+        Then User dont see <title> in web
         Examples:
             | title | category1| category2 | description |
-    # Scenario: fail
 
     
 
