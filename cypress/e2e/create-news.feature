@@ -1,6 +1,6 @@
 Feature: create news
     Scenario Outline: success
-        Given User login as a admin
+       Given User login as a sazande
         * User click "اخبار" in menu
         * User click "اضافه کردن خبر" button in web
         * User fill create-news form in web
