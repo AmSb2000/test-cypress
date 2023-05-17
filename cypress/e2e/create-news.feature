@@ -1,24 +1,15 @@
 Feature: create news
     Scenario Outline: success
-        Given User login as a User
-        * User visit news page
+       Given User login as a sazande
+        * User click "اخبار" in menu
         * User click "اضافه کردن خبر" button in web
-        * User fill the widget
-            | title |
-            |<title>|
-        * User fill the widget 
-            | selectArray |
-            | <category>  |
-
-        * User fill the widget
-            | ckEditor |
-            | <content>|
-        When User click "اضافه کردن" button in web
-        Then User see <title>
-
+        * User fill create-news form in web
+            | title*string |  category.0.name | category.1.name |  description  |
+            |  <title>     |    <category1>   |  <category2>    | <description> |
+        When User click "ثبت" button in web
+        Then User dont see <title> in web
         Examples:
-            | title | category | content |
-    # Scenario: fail
+            | title | category1| category2 | description |
 
     
 
