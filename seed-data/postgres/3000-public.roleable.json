@@ -1,0 +1,11 @@
+{
+  "entities" : [
+    {
+      "uuid": "roleable1",
+      "personId": "p1",
+      "roleId": "r1",
+      "type": "test.test",
+      "typeId": "1" 
+    }
+  ]
+}

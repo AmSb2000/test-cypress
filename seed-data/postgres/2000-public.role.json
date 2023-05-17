@@ -1,0 +1,12 @@
+{
+  "entities" : [
+    {
+      "uuid": "r1",
+      "name": "role1"
+    },
+    {
+      "uuid": "r2",
+      "name": "role2"
+    }
+ ]
+}

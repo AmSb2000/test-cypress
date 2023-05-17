@@ -1,0 +1,19 @@
+{
+  "entities": [
+    {
+      "key":"k",
+      "value": "v",
+      "expire": 60000
+    },
+    {
+      "key":"k2",
+      "value": "v",
+      "expire": 60000
+    },
+    {
+      "key":"k3",
+      "value": "v",
+      "expire": 60000
+    }
+  ]
+}
