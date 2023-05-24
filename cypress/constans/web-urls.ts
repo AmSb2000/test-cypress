@@ -6,5 +6,6 @@ export const URL ={
     profile :'/profile',
     login:'/login',
     signup:'/signup',
-    news:'/news'
+    news:'/news',
+    compony_list : '/dashboard/company_list',
 }

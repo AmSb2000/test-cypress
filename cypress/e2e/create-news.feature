@@ -7,9 +7,10 @@ Feature: create news
             | title*string |  category.0.name | category.1.name |  description  |
             |  <title>     |    <category1>   |  <category2>    | <description> |
         When User click "ثبت" button in web
-        Then User dont see <title> in web
-        Examples:
+        Then User should see empty inputs in web
+            Examples:
             | title | category1| category2 | description |
 
     
+
 
