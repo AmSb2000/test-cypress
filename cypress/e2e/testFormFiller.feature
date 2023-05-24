@@ -12,7 +12,7 @@ Feature:test form filler
         # Given User login as a admin
         # When User click "send" button in web    
         # Then User see empty inputs in web
-        Then User should see columns in list in web  
+        Then User should see columns in "company-list" list in web  
             | دامنه | شماره تلفن ثابت | شماره ثبت | نام شرکت |
             # | domain |
             # | hfahjjh|
