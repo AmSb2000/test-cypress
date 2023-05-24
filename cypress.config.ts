@@ -39,7 +39,7 @@ async function setupNodeEvents(
 console.log(process.env.baseUrl)
 export default defineConfig({
   e2e: {
-    baseUrl: process.env.baseUrl || "https://dg.hyvatech.com/",
+    baseUrl: process.env.baseUrl || "http://localhost/",
     specPattern: "**/*.feature",
     setupNodeEvents,
     chromeWebSecurity: false,
