@@ -1,0 +1,31 @@
+{
+  "entities" : [
+    {
+      "uuid": "cgr-rule-1",
+      "group": { "id": "gr-sazande-pardazesh"},
+      "companyRole": {"id":2},
+      "personRole" : null ,
+      "model" : null ,
+      "action": null ,
+      "relation" : null 
+    },
+    {
+      "uuid": "cgr-rule-2",
+      "group": {"id":"gr-karmand-pardazesh"},
+      "companyRole": {"id":2} ,
+      "personRole" : null ,
+      "model" : {"id":4 },
+      "action": null ,
+      "relation" : null 
+    },
+    {
+      "uuid": "cgr-rule-3",
+      "group": {"id":"gr-karmand-pardazesh"},
+      "companyRole": { "id":2} ,
+      "personRole" : null ,
+      "model" : {"id":5} ,
+      "action": null ,
+      "relation" : null 
+    }
+  ]
+}

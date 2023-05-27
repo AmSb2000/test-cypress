@@ -1,0 +1,32 @@
+{ 
+  "entities" : [
+    {
+      "uuid": "us-customer",
+      "realPerson" : {"id":"pr-customer"} ,
+      "username" : "customer",
+      "password" : "$2b$11$dwgtNLQVAixGrNcMCHaVoe3azp.SUyZVMt.wUKUPIdSjRZKq5iGbS"
+    },
+    {
+      "uuid": "us-sazande",
+      "realPerson" : {"id":"pr-sazande"}, 
+      "username" : "sazande",
+      "password" : "$2b$11$dwgtNLQVAixGrNcMCHaVoe3azp.SUyZVMt.wUKUPIdSjRZKq5iGbS",
+      "groups":[{"id": "gr-sazande-pardazesh"}]
+    },
+    {
+      "uuid": "us-nazer" ,
+      "realPerson" : {"id":"pr-nazer"} ,
+      "username" : "nazer",
+      "password" : "$2b$11$dwgtNLQVAixGrNcMCHaVoe3azp.SUyZVMt.wUKUPIdSjRZKq5iGbS"
+      
+    },
+    {
+      "uuid" : "us-karmand" ,
+      "realPerson": {"id":"pr-karmand"} ,
+      "username" : "karmand",
+      "password" : "$2b$11$dwgtNLQVAixGrNcMCHaVoe3azp.SUyZVMt.wUKUPIdSjRZKq5iGbS",
+      "groups":[{"id": "gr-karmand-pardazesh"}]
+      
+    }
+ ]
+}
