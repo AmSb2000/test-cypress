@@ -1,0 +1,10 @@
+{
+  "entities" : [
+    {
+      "uuid": "taggable1",
+      "tag": { "id": "tag1"},
+      "type": "site_management__term",
+      "typeId": "term1" 
+    }
+  ]
+}

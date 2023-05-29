@@ -10,5 +10,13 @@ export const LOGIN_REST_DATA = {
   karmand: {
     username: 'karmand',
     password: 'admin'
+  },
+  nazer: {
+    username: 'nazer',
+    password: 'admin'
+  },
+  customer: {
+    username: 'customer',
+    password: 'admin'
   }
 }

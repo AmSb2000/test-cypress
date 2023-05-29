@@ -1,16 +1,24 @@
 import "../../share-cypress-cucumber-tools/cy-ms-form-builder/public";
 
- before(() => {
-	console.log('I run before tests start')
+before(() => {
 	cy.task('dataManagement:before').then(function(res) {expect(res).to.eq(true); console.log('dataManagement:before task')})
 })
 
 beforeEach(() => {
-	console.log('I run before every test in every spec file!!!!!!')
 	cy.task('dataManagement:beforeEach').then(function(res) {expect(res).to.eq(true); console.log('dataManagement:beforeEach task')})
 })
 
+// beforeEach(()=>{
+// 	cy.intercept('**' ,(req)=>{
+// 		console.log('dali')
+// 		// const token = cy.get('@token')
+// 		// console.log(`request before chagne ${req}`)
+// 		// req.headers['Authorization'] = `Bearer ${token}`
+//   	// req.headers['Content-Type'] = 'application/json'
+// 		// console.log(`request after chagne ${req}`)
+// 	})
+// })
+
 after(() => {
-	console.log('I run after test in every spec file!!!!!!')
 	cy.task('dataManagement:after').then(function(res) {expect(res).to.eq(true); console.log('dataManagement:after task')})
 })
