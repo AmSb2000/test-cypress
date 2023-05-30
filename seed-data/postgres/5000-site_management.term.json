@@ -1,0 +1,9 @@
+{
+  "entities" : [
+    {
+      "uuid": "term1",
+      "title": "term title",
+      "content": "term content"
+    }
+  ]
+}
