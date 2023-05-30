@@ -1,3 +1,4 @@
+@qa_release
 Feature: term CRUD
   Scenario: delete - success
     # When User submit term with method POST as sazande in rest
