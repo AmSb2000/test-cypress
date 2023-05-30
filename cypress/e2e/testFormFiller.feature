@@ -1,11 +1,12 @@
 Feature:test form filler 
     Scenario Outline:fill form and click button 
-        Given User visit compony_list page in web
+        Given User visit create_compony page in web
         # * User upload file in form
-        # * User fill the form in web
+        * User fill CompanyAddForm form in web
         # | arrFile.0.file4*file|
         # arrFile.0.file5*file | arrFile.1.file5*file | 
-        # name*string | number*int | file*file |
+        |fullName*string | number*int |
+        | jsjsj      | 77878      |
         # | <file>    |
         #  <file> | <file2> |
         #  'ajafkaj' | 886868 | <file> |

@@ -7,10 +7,13 @@
 // });
 import { DataTable, Given } from "@badeball/cypress-cucumber-preprocessor";
 import { DT2Object } from '../../../../share-cypress-cucumber-tools/dtable2obj/src/app';
-Given("User fill {word} form in web", (word ,data:DataTable)=>{
-    let res = DT2Object.resolve(data);
-    cy.get('form').then((form)=>{
-        form[0].setData(res);            
-    })    
 
+Given("User fill {word} form in web", (name ,data:DataTable)=>{
+    let res = DT2Object.resolve(data);
+    // cy.get('form').then((form)=>{
+    //     form[0].setData(res);
+    // })
+    cy.get('form[name="' + name + '"]').then((form)=>{
+        form[0].setData(res);
+    })
 })

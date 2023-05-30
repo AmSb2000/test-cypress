@@ -1,6 +1,6 @@
 import { Then } from "@badeball/cypress-cucumber-preprocessor";
 
-Then("User see {string}", (word) => {
+Then("User see {string} in web", (word) => {
   cy.contains(word as string);
 });
 
