@@ -8,6 +8,8 @@ When("Check response data and statusCode {word}", function (statusCode: string, 
         let responseData = (response as any).body.data
         // if it was array, just check the first element...
         responseData = Array.isArray(responseData)? responseData[0] : responseData;
+        // const clone = (JSON.parse(JSON.stringify(responseData)))
+        // console.log(clone, 'clone')
         const expectedData = DT2Object.resolve(data) as any;
         expect(deepInclude(responseData, expectedData)).to.eq(true)
       }
@@ -21,7 +23,7 @@ export function deepInclude(object , contain){
         let notFound = true;
         for (const oItemIndex in object[key]){
           if (deepInclude(object[key][oItemIndex], value[cItemIndex])){
-            delete object[key][oItemIndex];
+            object[key].pop(oItemIndex);
             notFound = false;
             break;
           }

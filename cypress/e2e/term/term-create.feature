@@ -2,7 +2,7 @@
 Feature: term CRUD
     Scenario: create - success
         # When User submit term with method POST as sazande in rest
-        When User submit "create" "term"-"" as "sazande" in rest
+        When User submit "create" "term"-"" as "admin" in rest
             | title*string | content* string | tags.0.tag.id*int | tags.0.tag.name*string |
             | <title>      | <content>       | <tagId>           | <tagName>              |
         Then Check response data and statusCode <statusCode>

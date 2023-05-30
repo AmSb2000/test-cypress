@@ -1,7 +1,7 @@
 @qa_release
 Feature: term CRUD
   Scenario: delete - success
-    # When User submit term with method POST as sazande in rest
+    # TODO: fix authorization for delete
     When User submit "delete" "term"-"1" as "customer" in rest
       | id*int |
       | <id>   |

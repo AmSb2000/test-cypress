@@ -1,11 +1,11 @@
 import "../../share-cypress-cucumber-tools/cy-ms-form-builder/public";
 
 before(() => {
-	cy.task('dataManagement:before').then(function(res) {expect(res).to.eq(true); console.log('dataManagement:before task')})
+	cy.task('dataManagement:before').then(function(res) {expect(res).to.eq(true);})
 })
 
 beforeEach(() => {
-	cy.task('dataManagement:beforeEach').then(function(res) {expect(res).to.eq(true); console.log('dataManagement:beforeEach task')})
+	cy.task('dataManagement:beforeEach').then(function(res) {expect(res).to.eq(true);})
 })
 
 // beforeEach(()=>{
@@ -20,5 +20,5 @@ beforeEach(() => {
 // })
 
 after(() => {
-	cy.task('dataManagement:after').then(function(res) {expect(res).to.eq(true); console.log('dataManagement:after task')})
+	cy.task('dataManagement:after').then(function(res) {expect(res).to.eq(true);})
 })
