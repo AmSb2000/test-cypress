@@ -2,8 +2,8 @@
   "entities" : [
     {
       "uuid": "roleable1",
-      "personId": "p1",
-      "roleId": "r1",
+      "person": {"id":"p3"},
+      "role": {"id":"r1"},
       "type": "test.test",
       "typeId": "1" 
     }

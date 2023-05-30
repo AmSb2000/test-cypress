@@ -1,0 +1,13 @@
+{ 
+  "entities" : [
+    {
+      "uuid" : "co-paradazesh" ,
+      "person": {"id":"p-paradazesh" } ,
+      "fullName": "amn sazan yazd" ,
+      "domain" : "nginx" , 
+      "parent" : {
+        "id" : 1
+      }
+    }
+ ]
+}

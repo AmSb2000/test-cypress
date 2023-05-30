@@ -1,0 +1,10 @@
+{
+  "entities" : [
+    {
+      "uuid": "faq1",
+      "title": "faq title",
+      "question": "faq question",
+      "answer": "faq answer"
+    }
+  ]
+}

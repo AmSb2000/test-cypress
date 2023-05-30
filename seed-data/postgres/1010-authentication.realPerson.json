@@ -1,0 +1,31 @@
+{ 
+  "entities" : [
+    {
+      "uuid": "pr-customer",
+      "person" : {"id": "p-customer"},
+      "firstName": "amir" , 
+      "lastName" : "rasooli" ,
+      "mobileNumber": "0912357874"
+    },
+    {
+      "uuid": "pr-sazande",
+      "person" : { "id": "p-sazande"}, 
+      "firstName": "amin" , 
+      "lastName" : "abdollahi" ,
+      "mobileNumber": "0914563876"
+    },{
+      "uuid": "pr-nazer" ,
+      "person" : { "id": "p-nazer"} ,
+      "firstName": "amin" , 
+      "lastName" : "naser zadeh" ,
+      "mobileNumber": "0916345267"
+    },
+    {
+      "uuid" : "pr-karmand" ,
+      "person": {"id": "p-karmand" },
+      "firstName": "gholam" , 
+      "lastName" : "amini" ,
+      "mobileNumber": "0914653428"
+    }
+ ]
+}
