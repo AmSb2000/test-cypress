@@ -1,11 +1,61 @@
 {
   "entities" : [
-    {
-      "uuid": "roleable1",
-      "person": {"id":"p3"},
-      "role": {"id":"r1"},
-      "type": "test.test",
-      "typeId": "1" 
+  {
+    "uuid": "roleable-co-paradazesh",
+    "type": "authentication__company",
+    "typeId": "co-paradazesh",
+    "role": {
+      "id": 2
+    },
+    "person": {
+      "id": "p-paradazesh"
     }
+  } ,
+  {
+    "uuid": "roleable-gr-sazande-pardazesh",
+    "type": "authentication__group",
+    "typeId": "gr-sazande-pardazesh",
+    "role": {
+      "id": 2
+    },
+    "person": {
+      "id": "p-paradazesh"
+    }
+  },
+  {
+    "uuid": "roleable-gr-karmand-pardazesh",
+    "type": "authentication__group",
+    "typeId": "gr-karmand-pardazesh",
+    "role": {
+      "id": 2
+    },
+    "person": {
+      "id": "p-paradazesh"
+    }
+  },
+  {
+    "uuid": "roleable-faq1",
+    "type": "site_management__faq",
+    "typeId": "faq1",
+    "role": {
+      "id": 2
+    },
+    "person": {
+      "id": "p-paradazesh"
+    }
+  },
+  {
+    "uuid": "roleable-term1",
+    "type": "site_management__term",
+    "typeId": "term1",
+    "role": {
+      "id": 2
+    },
+    "person": {
+      "id": "p-paradazesh"
+    }
+  }
   ]
 }
+
+

@@ -2,7 +2,7 @@
 Feature: term CRUD
   Scenario: delete - success
     # TODO: fix authorization for delete
-    When User submit "delete" "term"-"1" as "customer" in rest
+    When User submit "delete" "term"-"1" as "sazande" in rest
       | id*int |
       | <id>   |
 

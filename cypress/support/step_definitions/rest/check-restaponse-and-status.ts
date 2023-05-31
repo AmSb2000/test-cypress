@@ -3,15 +3,19 @@ import { DT2Object } from '../../../../share-cypress-cucumber-tools/dtable2obj/s
 
 When("Check response data and statusCode {word}", function (statusCode: string, data: DataTable) {
   cy.get('@response').then((response)=>{
+      const body = (response as any).body ;
       expect((response as any).status).to.eq(Number(statusCode)); 
-      if (data){
-        let responseData = (response as any).body.data
+      if ( data && +statusCode < 300  && +statusCode >= 200){
+        let responseData = body.data ;
         // if it was array, just check the first element...
         responseData = Array.isArray(responseData)? responseData[0] : responseData;
-        // const clone = (JSON.parse(JSON.stringify(responseData)))
-        // console.log(clone, 'clone')
+        const clone = (JSON.parse(JSON.stringify(responseData)))
+        cy.log(clone);
         const expectedData = DT2Object.resolve(data) as any;
         expect(deepInclude(responseData, expectedData)).to.eq(true)
+      } else if(+statusCode >= 400 && +statusCode < 500 ) {
+        expect(body).have.property('error')
+        expect(body).have.property('message')
       }
   })
 });

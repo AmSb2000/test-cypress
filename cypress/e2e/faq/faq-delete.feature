@@ -2,7 +2,7 @@
 Feature: FAQ CRUD
   Scenario: delete - success
     # TODO: fix authorization for delete....
-    When User submit "delete" "faq"-"1" as "customer" in rest
+    When User submit "delete" "faq"-"1" as "sazande" in rest
       | id*int |
       | <id>   |
 
