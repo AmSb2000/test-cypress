@@ -11,6 +11,13 @@
       "tag": { "id": "tag1"},
       "type": "site_management__faq",
       "typeId": "faq1" 
+    },
+     {
+      "uuid": "taggable3",
+      "tag": { "id": "tag1"},
+      "type": "site_management__news",
+      "typeId": "news1" 
     }
+
   ]
 }

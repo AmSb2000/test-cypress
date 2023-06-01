@@ -1,7 +1,7 @@
 @qa_release
-Feature: term CRUD
+Feature: news CRUD
   Scenario: update - success
-    When User submit "update" "term"-"1" as <user> in rest
+    When User submit "update" "news"-"1" as <user> in rest
       | id*int | title*string | content* string | tags.0.tag.id*int | tags.0.tag.name*string |
       | <id>   | <title>      | <content>       | <tagId>           | <tagName>              |
 

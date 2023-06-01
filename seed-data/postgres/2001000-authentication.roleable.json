@@ -54,6 +54,17 @@
     "person": {
       "id": "p-paradazesh"
     }
+  },
+  {
+    "uuid": "roleable-news1",
+    "type": "site_management__news",
+    "typeId": "news1",
+    "role": {
+      "id": 2
+    },
+    "person": {
+      "id": "p-paradazesh"
+    }
   }
   ]
 }

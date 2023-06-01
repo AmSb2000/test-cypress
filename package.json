@@ -9,7 +9,10 @@
     "rest": "npm run test:all -- --env tags='@qa_release and @rest'",
     "current": "npm run test:all -- --env tags='@qa_release and @current'",
     "qa_release": "npm run test:all -- --env tags='@qa_release'",
-    "test": "npm run qa_release"
+    "test": "npm run qa_release",
+    "backup:delete": "rm /tmp/*backup*",
+    "backup:restore":"./restore_backup.sh",
+    "backup:restore_before_seed":"./restore_before_seed_backup.sh"
   },
   "dependencies": {
     "@badeball/cypress-cucumber-preprocessor": "latest",
