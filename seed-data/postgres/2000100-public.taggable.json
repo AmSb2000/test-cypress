@@ -9,7 +9,7 @@
     {
       "uuid": "taggable2",
       "tag": { "id": "tag1"},
-      "type": "site_management__f_a_q",
+      "type": "site_management__faq",
       "typeId": "faq1" 
     }
   ]
