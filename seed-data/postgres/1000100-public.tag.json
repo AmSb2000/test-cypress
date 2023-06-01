@@ -1,0 +1,12 @@
+{ 
+  "entities" : [
+    {
+      "uuid": "tag1",
+      "name":"firstTag"
+    },
+    {
+      "uuid": "tag2",
+      "name":"secondTag"
+    }
+ ]
+}

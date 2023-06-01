@@ -3,12 +3,13 @@
   "version": "1.0.0",
   "scripts": {
     "cypress": "node_modules/cypress/bin/cypress",
-    "test:run": "npm run cypress -- run",
+    "test:all": "npm run cypress -- run",
     "open": "npm run cypress -- open",
-    "web": "npm run test:run -- --env tags='@qa_release and @web'",
-    "rest": "npm run test:run -- --env tags='@qa_release and @rest'",
-    "current": "npm run test:run -- --env tags='@qa_release and @current'",
-    "qa_release": "npm run test:run -- --env tags='@qa_release'"
+    "web": "npm run test:all -- --env tags='@qa_release and @web'",
+    "rest": "npm run test:all -- --env tags='@qa_release and @rest'",
+    "current": "npm run test:all -- --env tags='@qa_release and @current'",
+    "qa_release": "npm run test:all -- --env tags='@qa_release'",
+    "test": "npm run qa_release"
   },
   "dependencies": {
     "@badeball/cypress-cucumber-preprocessor": "latest",
@@ -16,7 +17,7 @@
     "axios": "^1.3.5",
     "cypress": "^12.3.0",
     "dotenv": "^16.0.3",
-    "typescript": "latest"
+    "typescript": "^4.9.5"
   },
   "cypress-cucumber-preprocessor": {
     "filterSpecs": true,
