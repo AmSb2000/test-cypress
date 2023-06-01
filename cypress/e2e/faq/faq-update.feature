@@ -2,7 +2,7 @@
 Feature: FAQ CRUD
   Scenario: update - success
     # When User submit term with method POST as sazande in rest
-    When User submit "update" "faq"-"1" as "admin" in rest
+    When User submit "update" "faq"-"1" as "sazande" in rest
       | id*int | title*string | question* string | answer*string | tags.0.tag.id*int | tags.0.tag.name*string |
       | <id>   | <title>      | <question>       | <answer>      | <tagId>           | <tagName>              |
 
