@@ -1,7 +1,7 @@
 @qa_release
-Feature: FAQ CRUD
+Feature: news CRUD
   Scenario: delete - success
-    When User submit "delete" "faq"-"1" as <user> in rest
+    When User submit "delete" "news"-"1" as <user> in rest
       | id*int |
       | <id>   |
 
