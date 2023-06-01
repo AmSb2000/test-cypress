@@ -8,4 +8,6 @@ export const URL ={
     signup:'/signup',
     news:'/news',
     compony_list : '/dashboard/company_list',
+    complete_profile:'/complete-profile',
+    create_compony :'/dashboard/create_company'
 }
