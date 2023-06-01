@@ -1,5 +1,6 @@
 export const URL ={
-    home : '',
+    form_builder : '/form-builder',
+    home:'',
     dashboard:'/dashboard',
     company:'/company',
     profile :'/profile',
