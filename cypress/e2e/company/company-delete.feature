@@ -1,12 +1,11 @@
 @qa_release
-Feature: term CRUD
+Feature: company CRUD
   Scenario: delete - success
-
-    When User submit "delete" "term"-"1" as "sazande" in rest
+    When User submit "delete" "company"-"2" as "admin" in rest
       | id*int |
       | <id>   |
-
+    # Then User wait for '400' secound
     Then Check response data and statusCode <statusCode>
     Examples:
       | id | statusCode |
-      | 1  | 200        |
+      | 2  | 200        |

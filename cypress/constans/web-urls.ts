@@ -5,5 +5,5 @@ export const URL ={
     profile :'/profile',
     login:'/login',
     signup:'/signup',
-    news:'/news'
+    news:'/news' ,
 }

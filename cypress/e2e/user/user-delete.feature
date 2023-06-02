@@ -1,8 +1,7 @@
 @qa_release
-Feature: term CRUD
+Feature: User CRUD
   Scenario: delete - success
-
-    When User submit "delete" "term"-"1" as "sazande" in rest
+    When User submit "delete" "user"-"5" as "karmand" in rest
       | id*int |
       | <id>   |
 
