@@ -6,4 +6,5 @@ export const URL ={
     province  : '/api/province' , 
     company : '/api/company' ,
     user : '/api/user',
+    news: '/api/news'
 }

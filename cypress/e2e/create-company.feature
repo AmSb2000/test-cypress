@@ -1,20 +1,19 @@
 Feature: create company
-    Scenario:success 
+    @web
+    Scenario Outline:success 
         Given User login as a admin
-        * User visit company page
-        * User click ثبت دامنه button
-        * User fill the form
-        | name*string | registerNumber*int | nationalId*int | code*int | phone*int | licenseNumber*int | address*string  | link*string |
-        |  <name>     |  <registerNumber>  |  <nationalId>  | <code>   |  <phone>  |  <licenseNumber>  |  <address>     |  <link>     |
-        * User fill the widget 
-        |  day |
-        |<date>|
-        When User click ثبت button
-        Then User see <name> 
+        * User visit company page in web
+        * User click "ثبت دامنه" button in web
+        Given User fill the form in web
+        | name | shomare_sabt | shenase_meli | parvane_nesam_mohandesi | code_eghtesadi | telephone | domain | address |
+        |<name>|<shomare_sabt>|<shenase_meli>|<parvane_nesam_mohandesi>|<code_eghtesadi>|<telephone>|<domain>|<address>|
+        When User click "ثبت" button in web
+        Then User <action> <name> 
 
 
         Examples:
-        | name | registerNumber | nationalId | code | phone | licenseNumber | address | date | site | user | role |
-
+        | name | shomare_sabt | shenase_meli | parvane_nesam_mohandesi | code_eghtesadi | telephone | domain | address | action |
+        |      |              |              |                         |                |           |        |         |   see  |
+        |      |              |              |                         |                |           |        |         |dont see|
 
     # Scenario:fail

@@ -1,12 +1,13 @@
 @qa_release
 Feature: term CRUD
   Scenario: delete - success
-
-    When User submit "delete" "term"-"1" as "sazande" in rest
+    When User submit "delete" "term"-"1" as <user> in rest
       | id*int |
       | <id>   |
 
     Then Check response data and statusCode <statusCode>
     Examples:
-      | id | statusCode |
-      | 1  | 200        |
+      | user       | id | statusCode |
+      | "sazande"  | 1  | 200        |
+      | "admin"    | 1  | 200        |
+      | "customer" | 1  | 403        |

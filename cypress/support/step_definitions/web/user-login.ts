@@ -9,6 +9,10 @@ let object = {
     user:{
         phone: '2',
         password:'555555'
+    },
+    sazande:{
+        phone:'',
+        password:''
     }
 }
 Given("User login as a {word}" , (role)=>{
