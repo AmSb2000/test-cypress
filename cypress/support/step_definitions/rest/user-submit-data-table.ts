@@ -4,7 +4,7 @@ import { URL } from '../../../constans/rest-urls';
 import { ACCESS_TOKEN } from '../../../constans/access-tokens';
 import { ACTION_METHODS } from '../../../constans/action-methods';
 
-When("User submit {string} {string}-{string} as {string} in rest", (action: string, subject: string, subjectId:string  ,user: string, data: DataTable) => {
+When("User submit {string} {string}-{string} as {string} in rest dataTable", (action: string, subject: string, subjectId:string  ,user: string, data: DataTable) => {
   // console.log('id is ', id)
   
   let res = data ? DT2Object.resolve(data): data;
@@ -18,6 +18,8 @@ When("User submit {string} {string}-{string} as {string} in rest", (action: stri
       'Content-Type': 'application/json',
       'Authorization': `Bearer ${ACCESS_TOKEN[user]}`
     },
+  }).then((response)=>{
+    cy.log(user ,ACCESS_TOKEN[user] , response.body.data)
   })
 
   cy.request({
@@ -25,11 +27,14 @@ When("User submit {string} {string}-{string} as {string} in rest", (action: stri
     url: URL[subject].concat(subjectId ? `/${subjectId}`: ""),
     headers: {
       'Content-Type': 'application/json',
-      'Authorization': `Bearer ${ACCESS_TOKEN[user]}`
+      'Authorization': `Bearer ${ACCESS_TOKEN[user]}` ,
+      'todatatable' : 'all'
     },
     body: res as Cypress.RequestBody,
     failOnStatusCode: false
-  }).as('response')
+  }).as('response').then((response)=>{
+    console.log(response.body)
+  })
 
   return true;
 });

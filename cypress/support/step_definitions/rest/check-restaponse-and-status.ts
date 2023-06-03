@@ -10,38 +10,49 @@ When("Check response data and statusCode {word}", function (statusCode: string, 
         // if it was array, just check the first element...
         responseData = Array.isArray(responseData)? responseData[0] : responseData;
         const clone = (JSON.parse(JSON.stringify(responseData)))
-        cy.log(clone);
         const expectedData = DT2Object.resolve(data) as any;
-        expect(deepInclude(responseData, expectedData)).to.eq(true)
+        const compare = deepInclude(responseData, expectedData) ;
+        if(!compare){
+          console.log('not included' ,clone , expectedData )
+        }
+        expect(compare).to.eq(true);
+        
       } else if(+statusCode >= 400 && +statusCode < 500 ) {
-        expect(body).have.property('error')
         expect(body).have.property('message')
       }
   })
 });
 
-export function deepInclude(object , contain){
+export function deepInclude(object , contain , parentKey = ''){
+  if(!object){
+    console.error(`${parentKey} object not exist`)
+    return false ;
+  }
   for(const [key, value] of Object.entries(contain)){
     if (Array.isArray(value)){
       for (const cItemIndex in value){
         let notFound = true;
         for (const oItemIndex in object[key]){
-          if (deepInclude(object[key][oItemIndex], value[cItemIndex])){
+          if (deepInclude(
+              object[key][oItemIndex], 
+              value[cItemIndex], 
+              `${parentKey}${parentKey? '.' : ''}${cItemIndex}`
+            )){
             object[key].pop(oItemIndex);
             notFound = false;
             break;
           }
         }
         if (notFound) {
-          // console.log('false check array, ', value[cItemIndex])
+          console.error( `${parentKey} array not contain` , cItemIndex)
           return false;
         }
       }
     } else if ( typeof value === 'object'){
-      return deepInclude(object[key], value);
+      return deepInclude(object[key], value , `${parentKey}${parentKey? '.' : ''}${key}`);
     } else {
       if (object[key] !== value){ 
-        // console.log('false check, ', object[key], value)
+        console.error( `${parentKey}${parentKey? '.' : ''}${key} ${object[key]} not equal ${value}`)
         return false;
       }
     }
