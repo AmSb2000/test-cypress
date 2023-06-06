@@ -1,0 +1,72 @@
+{
+  "entities" : [
+  {
+    "uuid": "roleable-co-paradazesh",
+    "type": "authentication__company",
+    "typeId": "co-paradazesh",
+    "role": {
+      "id": 2
+    },
+    "person": {
+      "id": "p-paradazesh"
+    }
+  } ,
+  {
+    "uuid": "roleable-gr-sazande-pardazesh",
+    "type": "authentication__group",
+    "typeId": "gr-sazande-pardazesh",
+    "role": {
+      "id": 2
+    },
+    "person": {
+      "id": "p-paradazesh"
+    }
+  },
+  {
+    "uuid": "roleable-gr-karmand-pardazesh",
+    "type": "authentication__group",
+    "typeId": "gr-karmand-pardazesh",
+    "role": {
+      "id": 2
+    },
+    "person": {
+      "id": "p-paradazesh"
+    }
+  },
+  {
+    "uuid": "roleable-faq1",
+    "type": "site_management__faq",
+    "typeId": "faq1",
+    "role": {
+      "id": 2
+    },
+    "person": {
+      "id": "p-paradazesh"
+    }
+  },
+  {
+    "uuid": "roleable-term1",
+    "type": "site_management__term",
+    "typeId": "term1",
+    "role": {
+      "id": 2
+    },
+    "person": {
+      "id": "p-paradazesh"
+    }
+  },
+  {
+    "uuid": "roleable-news1",
+    "type": "site_management__news",
+    "typeId": "news1",
+    "role": {
+      "id": 2
+    },
+    "person": {
+      "id": "p-paradazesh"
+    }
+  }
+  ]
+}
+
+

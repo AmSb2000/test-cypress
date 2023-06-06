@@ -18,5 +18,9 @@ export const LOGIN_REST_DATA = {
   customer: {
     username: 'customer',
     password: 'admin'
+  },
+  notLogin : {
+    username : 'alaki' , 
+    password : 'alaki'
   }
 }

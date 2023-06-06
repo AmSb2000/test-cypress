@@ -1,3 +1,4 @@
+@qa_release
 Feature: create session
   Scenario Outline:success
     When User login as <user> in rest
@@ -9,3 +10,4 @@ Feature: create session
       | karmand  | 201        |
       | nazer    | 201        |
       | customer | 201        |
+      | notLogin | 403        |
