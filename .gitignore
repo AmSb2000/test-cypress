@@ -3,3 +3,4 @@ node_modules/
 cypress/videos/
 db_backup.sql
 .VSCodeCounter/
+cypress/screenshots/

@@ -1,11 +1,11 @@
-import "../../share-cypress-cucumber-tools/cy-ms-form-builder/public";
+// import "../../share-cypress-cucumber-tools/cy-ms-form-builder/public";
 
 before(() => {
-	cy.task('dataManagement:before').then(function(res) {expect(res).to.eq(true);})
+	// cy.task('dataManagement:before').then(function(res) {expect(res).to.eq(true);})
 })
 
 beforeEach(() => {
-	cy.task('dataManagement:beforeEach').then(function(res) {expect(res).to.eq(true);})
+	// cy.task('dataManagement:beforeEach').then(function(res) {expect(res).to.eq(true);})
 })
 
 // beforeEach(()=>{
@@ -20,5 +20,5 @@ beforeEach(() => {
 // })
 
 after(() => {
-	cy.task('dataManagement:after').then(function(res) {expect(res).to.eq(true);})
+	// cy.task('dataManagement:after').then(function(res) {expect(res).to.eq(true);})
 })
