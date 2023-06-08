@@ -1,0 +1,9 @@
+{
+  "entities" : [
+    {
+      "uuid": "news1",
+      "title": "news title",
+      "content": "news content"
+    }
+  ]
+}

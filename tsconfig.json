@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "paths": {
+      "cy-ms-form-builder": [
+        "./share-cypress-cucumber-tools/cy-ms-form-builder/public.ts"
+      ],
+      // "@DT2Object/*": [
+      //   "./share-cypress-cucumber-tools/*"
+      // ]
+    }
+  }
+}
