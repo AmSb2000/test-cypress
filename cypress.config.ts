@@ -39,7 +39,7 @@ async function setupNodeEvents(
 console.log(process.env.baseUrl)
 export default defineConfig({
   e2e: {
-    baseUrl: process.env.baseUrl || "https://steamcommunity.com/",
+    baseUrl: process.env.baseUrl || "https://store.steampowered.com/",
     specPattern: "**/*.feature",
     setupNodeEvents,
     chromeWebSecurity: false,
